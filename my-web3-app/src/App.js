@@ -10,6 +10,7 @@ import {
 import { PhantomWalletAdapter } from '@solana/wallet-adapter-wallets';
 import { clusterApiUrl } from '@solana/web3.js';
 import '@solana/wallet-adapter-react-ui/styles.css';
+import Navbar from './components/Navbar';
 
 function App() {
   // Set up the network to devnet for this example
@@ -23,6 +24,7 @@ function App() {
       <WalletProvider wallets={wallets} autoConnect>
         <WalletModalProvider>
           <div className="App">
+            <Navbar />
             <nav style={{ padding: '10px' }}>
               <WalletMultiButton />
             </nav>
